@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Classe principal do sistema JalaUniversityStudentManager.
+ * Classe principal do sistema JalaUManager.
  * Contém o método main que inicia a execução do programa e oferece um menu interativo para gerenciar alunos e cursos.
  * @author Nivea Lins
  */

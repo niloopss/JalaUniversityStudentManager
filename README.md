@@ -1,9 +1,9 @@
 # Atividade 3 - Tarefa I - JalaUniversityStudentManager  
-## JalaUniversityStudentManager  
-JalaUniversityStudentManager é um sistema de gerenciamento de alunos em uma universidade. Ele permite adicionar alunos, atribuir cursos e notas, além de listar alunos por curso ou exibir todos os alunos cadastrados. O código-fonte deste projeto foi totalmente documentado utilizando JavaDocs, facilitando a compreensão e manutenção do sistema.
+## JalaUManager  
+JalaUManager é um sistema de gerenciamento de alunos em uma universidade. Ele permite adicionar alunos, atribuir cursos e notas, além de listar alunos por curso ou exibir todos os alunos cadastrados. O código-fonte deste projeto foi totalmente documentado utilizando JavaDocs, facilitando a compreensão e manutenção do sistema.
 
 ## Descrição
-JalaUniversityStudentManager permite realizar as seguintes operações:  
+JalaUManager permite realizar as seguintes operações:  
 1. **Adicionar Aluno:**  
 - Coleta o nome e a nota inicial do aluno.  
 - Cria um objeto da classe Aluno para representar o novo aluno.  
@@ -29,7 +29,7 @@ JalaUniversityStudentManager permite realizar as seguintes operações:
 
 ## Fluxograma
 
-![Fluxograma - JalaUniversityStudentManager - Mermaid.png](Fluxograma%20-%20JalaUniversityStudentManager%20-%20Mermaid.png)
+![Fluxograma - JalaUManager - Mermaid.png](Fluxograma%20-%20JalaUManager%20-%20Mermaid.png)
 
 **Análise do Fluxograma:**  
 Ele se inicia com um menu principal (Menu) que oferece as seguintes opções:
@@ -45,11 +45,11 @@ Após cada operação, o sistema retorna ao menu principal, permitindo ao usuár
 
 ## Diagrama de Classes
 
-![Diagrama de Classes - JalaUniversityStudentManager - IntelliJ.png](Diagrama%20de%20Classes%20-%20JalaUniversityStudentManager%20-%20IntelliJ.png)  
+![Diagrama de Classes - JalaUManager - IntelliJ.png](Diagrama%20de%20Classes%20-%20JalaUManager%20-%20IntelliJ.png)
 Diagrama de classes gerado pelo IntelliJ  
 
 
-![Diagrama de Classes - JalaUniversityStudentManager - Mermaid.png](Diagrama%20de%20Classes%20-%20JalaUniversityStudentManager%20-%20Mermaid.png)  
+![Diagrama de Classes - JalaUManager  - Mermaid.png](Diagrama%20de%20Classes%20-%20JalaUManager%20%20-%20Mermaid.png)
 Diagrama de classes gerado pelo Mermaid
 
 O diagrama de classes mostra as classes principais e seus relacionamentos:
@@ -119,8 +119,8 @@ A interação com o sistema resultou nos seguintes dados:
 - João Pereira (Nota: 6.8, Cursos: História)
 
 ## Imagens das execuções
-![Inputs - JalaUniversityStudentManagement - IntelliJ.png](Inputs%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
-![Inputs 2 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%202%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
-![Inputs 3 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%203%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
-![Inputs 4 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%204%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
-![Inputs 5 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%205%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
+![Inputs - JalaUManager - IntelliJ.png](Inputs%20-%20JalaUManager%20-%20IntelliJ.png)
+![Inputs 2 - JalaUManager - IntelliJ.png](Inputs%202%20-%20JalaUManager%20-%20IntelliJ.png)
+![Inputs 3 - JalaUManager - IntelliJ.png](Inputs%203%20-%20JalaUManager%20-%20IntelliJ.png)
+![Inputs 4 - JalaUManager - IntelliJ.png](Inputs%204%20-%20JalaUManager%20-%20IntelliJ.png)
+![Inputs 5 - JalaUManager - IntelliJ.png](Inputs%205%20-%20JalaUManager%20-%20IntelliJ.png)
