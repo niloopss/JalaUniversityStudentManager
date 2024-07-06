@@ -1,15 +1,14 @@
-import java.util.ArrayList;
+import java.util.Vector;
 import java.util.List;
 
 class Aluno {
     private String nome;
     private double nota;
-    private final List<String> cursos;
+    private Vector<String> cursos = new Vector<>();
 
-    public Aluno(String nome) {
+    public Aluno(String nome, double nota) {
         this.nome = nome;
-        this.nota = 0.0;
-        this.cursos = new ArrayList<>();
+        this.nota = nota;
     }
 
     public String getNome() {
@@ -28,16 +27,11 @@ class Aluno {
         this.nota = nota;
     }
 
-    public List<String> getCursos() {
-        return cursos;
-    }
-
-    public void adicionarCurso(String curso) {
+    public void addCurso(String curso) {
         cursos.add(curso);
     }
 
-    @Override
-    public String toString() {
-        return "Nome: " + nome + ", Nota: " + nota + ", Cursos: " + String.join(", ", cursos);
+    public List<String> getCursos() {
+        return cursos;
     }
 }
