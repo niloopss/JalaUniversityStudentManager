@@ -1,8 +1,16 @@
 import java.util.List;
 import java.util.Scanner;
 
-
+/**
+ * Classe principal do sistema JalaUniversityStudentManager.
+ * Contém o método main que inicia a execução do programa e oferece um menu interativo para gerenciar alunos e cursos.
+ * @author Nivea Lins
+ */
 public class Main {
+    /**
+     * Método principal do programa.
+     * Exibe um menu com opções para adicionar alunos, atribuir cursos e notas, listar alunos e sair do programa.
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Universidade universidade = new Universidade();
@@ -21,14 +29,16 @@ public class Main {
 
             switch (opcao) {
                 case 1:
+                    /* Código para adicionar aluno */
                     System.out.print("Nome do aluno: ");
-                    scanner.nextLine(); // Consumir a quebra de linha
+                    scanner.nextLine();
                     String nome = scanner.nextLine();
                     System.out.print("Nota inicial: ");
                     double nota = scanner.nextDouble();
                     universidade.addAluno(new Aluno(nome, nota));
                     break;
                 case 2:
+                    /* Código para atribuir curso a aluno */
                     System.out.print("Nome do aluno: ");
                     scanner.nextLine();
                     nome = scanner.nextLine();
@@ -42,6 +52,7 @@ public class Main {
                     }
                     break;
                 case 3:
+                    /* Código para atribuir nota a aluno */
                     System.out.print("Nome do aluno: ");
                     scanner.nextLine();
                     nome = scanner.nextLine();
@@ -55,6 +66,7 @@ public class Main {
                     }
                     break;
                 case 4:
+                    /* Código para listar alunos por curso */
                     System.out.print("Nome do curso: ");
                     scanner.nextLine();
                     curso = scanner.nextLine();
@@ -66,9 +78,11 @@ public class Main {
                     }
                     break;
                 case 5:
+                    /* Código para listar todos os alunos */
                     universidade.listarAlunos();
                     break;
                 case 0:
+                    /* Código para sair do menu */
                     System.out.println("Saindo...");
                     break;
                 default:

@@ -1,6 +1,6 @@
 # Atividade 3 - Tarefa I - JalaUniversityStudentManager  
 ## JalaUniversityStudentManager  
-JalaUniversityStudentManager é um sistema de gerenciamento de alunos em uma universidade.  
+JalaUniversityStudentManager é um sistema de gerenciamento de alunos em uma universidade. Ele permite adicionar alunos, atribuir cursos e notas, além de listar alunos por curso ou exibir todos os alunos cadastrados. O código-fonte deste projeto foi totalmente documentado utilizando JavaDocs, facilitando a compreensão e manutenção do sistema.
 
 ## Descrição
 JalaUniversityStudentManager permite realizar as seguintes operações:  
@@ -26,6 +26,7 @@ JalaUniversityStudentManager permite realizar as seguintes operações:
 5. **Listar Todos os Alunos:**
 - Exibe as informações de todos os alunos cadastrados na universidade (nome, nota e cursos).  
 
+
 ## Fluxograma
 
 ![Fluxograma - JalaUniversityStudentManager - Mermaid.png](Fluxograma%20-%20JalaUniversityStudentManager%20-%20Mermaid.png)
@@ -42,14 +43,40 @@ Ele se inicia com um menu principal (Menu) que oferece as seguintes opções:
 
 Após cada operação, o sistema retorna ao menu principal, permitindo ao usuário realizar outras ações ou sair do programa.
 
-## Resultados da Execução
+## Diagrama de Classes
+
+![Diagrama de Classes - JalaUniversityStudentManager - IntelliJ.png](Diagrama%20de%20Classes%20-%20JalaUniversityStudentManager%20-%20IntelliJ.png)  
+Diagrama de classes gerado pelo IntelliJ  
+
+
+![Diagrama de Classes - JalaUniversityStudentManager - Mermaid.png](Diagrama%20de%20Classes%20-%20JalaUniversityStudentManager%20-%20Mermaid.png)  
+Diagrama de classes gerado pelo Mermaid
+
+O diagrama de classes mostra as classes principais e seus relacionamentos:
+
+1. **Aluno:**  
+- Representa um estudante da universidade.
+- Possui atributos como `nome`, `nota` e `cursos`.
+- Oferece métodos para gerenciar seus dados, como adicionar cursos (`addCurso`), obter nome e nota (`getNome`, `getNota`), e listar os cursos em que está matriculado (`getCursos`).
+2. **Universidade:**
+- Representa a instituição de ensino.
+- Contém uma lista de `alunos`.
+- Permite adicionar novos alunos (`addAluno`), filtrar alunos por curso (`filter`) e listar todos os alunos cadastrados (`listarAlunos`).
+3. **Main:**
+- Classe principal que inicia a execução do programa.
+- Cria instâncias de `Universidade` e `Aluno`, e gerencia a interação com o usuário através do menu.
+
+### Relacionamentos:
+- **Universidade - Aluno (1 para muitos):** Uma universidade possui vários alunos. Essa relação é representada pela seta direcionada de `Universidade` para `Aluno` e pela notação "1" e "*" nas extremidades da seta.
+- **Main - Universidade e Aluno (dependência):** A classe `Main` cria e utiliza objetos das classes `Universidade` e `Aluno` para realizar as operações do sistema. Essa relação é representada por setas tracejadas com a notação `<<create>>`.
+
 
 
 ## Inputs e Outputs
 
-O sistema interage com o usuário através de um menu no console. As opções do menu e seus respectivos inputs e outputs são:
+O sistema interage com o usuário por um menu no console. As opções do menu e seus respectivos inputs e outputs são:
 
-**2. Tabelas de Inputs e Outputs:**
+**Tabelas de Inputs e Outputs:**
 
 | Ação                       | Input                                                     | Output                                                                                                                                                  |
 |----------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,204 +89,38 @@ O sistema interage com o usuário através de um menu no console. As opções do
 
 
 
+## Resultados da Execução  
+
+A interação com o sistema resultou nos seguintes dados:  
+
+**Ações:**
+
+| Ação                       | Detalhes                                                                                                                                                                                                                             |
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. Adicionar aluno         | Aluna Ana Silva foi adicionada, Nota inicial: 8,7                                                                                                                                                                                    |
+| 1. Adicionar aluno         | Aluno Carlos Santos foi adicionada, Nota inicial: 7,5                                                                                                                                                                                |
+| 1. Adicionar aluno         | Aluna Maria Oliveira foi adicionada, Nota inicial: 9,3                                                                                                                                                                               |
+| 1. Adicionar aluno         | Aluno João Pereira foi adicionada, Nota inicial: 6,8                                                                                                                                                                                 |
+| 2. Atribuir Curso          | Ana Silva matriculada em "Matemática" e "Programação"                                                                                                                                                                                |
+| 2. Atribuir Curso          | Carlos Santos matriculado em "Física" e "Banco de Dados"                                                                                                                                                                             |
+| 2. Atribuir Curso          | Maria Oliveira matriculada em "Química"                                                                                                                                                                                              |
+| 2. Atribuir Curso          | João Pereira matriculado em "História"                                                                                                                                                                                               |
+| 3. Atribuir nota a aluno   | A nota 9,9 foi atribuída à aluna Ana Silva                                                                                                                                                                                           |
+| 4. Listar Alunos por Curso | Exibidos os alunos do curso "Programação": Ana Silva                                                                                                                                                                                 |
+| 5. Listar todos os alunos  | Exibidos todos os alunos: Ana Silva (Nota: 9.9, Cursos: Matemática, Programação), Carlos Santos (Nota: 7.5, Cursos: Física, Banco de Dados), Maria Oliveira (Nota: 9.3, Cursos: Química), João Pereira (Nota: 6.8, Cursos: História) |
+| 0. Sair                    | Mensagem "Saindo..." e programa encerrado                                                                                                                                                                                            |
 
 
-
-
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 1
-   Nome do aluno: Ana Silva
-   Nota inicial: 8,7
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 1
-   Nome do aluno: Carlos Santos
-   Nota inicial: 7,5
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 1
-   Nome do aluno: Maria Oliveira
-   Nota inicial: 9,3
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 1
-   Nome do aluno: João Pereira
-   Nota inicial: 6,8
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: Ana Silva
-   Curso a ser atribuído: Matematica
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: Ana Silva
-   Curso a ser atribuído: Programação
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: Carlos Santos
-   Curso a ser atribuído: Fisica
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: Carlos Santos
-   Curso a ser atribuído: Banco de Dados
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: Maria Oliveira
-   Curso a ser atribuído: Quimica
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 2
-   Nome do aluno: João Pereira
-   Curso a ser atribuído: Historia
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 5
-   Nome: Ana Silva, Nota: 8.7, Cursos: Matematica, Programação
-   Nome: Carlos Santos, Nota: 7.5, Cursos: Fisica, Banco de Dados
-   Nome: Maria Oliveira, Nota: 9.3, Cursos: Quimica
-   Nome: João Pereira, Nota: 6.8, Cursos: Historia
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 4
-   Nome do curso: Programação
-   Alunos no curso Programação: Ana Silva
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 3
-   Nome do aluno: Ana Silva
-   Nova nota: 9,9
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 5
-   Nome: Ana Silva, Nota: 9.9, Cursos: Matematica, Programação
-   Nome: Carlos Santos, Nota: 7.5, Cursos: Fisica, Banco de Dados
-   Nome: Maria Oliveira, Nota: 9.3, Cursos: Quimica
-   Nome: João Pereira, Nota: 6.8, Cursos: Historia
-
-Menu:
-1. Adicionar aluno
-2. Atribuir curso a aluno
-3. Atribuir nota a aluno
-4. Listar alunos por curso
-5. Listar todos os alunos
-0. Sair
-   Escolha uma opção: 0
-   Saindo...
-
-Process finished with exit code 0
-
-
-## Resultados da Sessão de Uso
-
-A interação com o sistema resultou nos seguintes dados:
-
-**Alunos Cadastrados:**  
+**Lista final de todos os alunos:**
 
 - Ana Silva (Nota: 9.9, Cursos: Matemática, Programação)
 - Carlos Santos (Nota: 7.5, Cursos: Física, Banco de Dados)
 - Maria Oliveira (Nota: 9.3, Cursos: Química)
 - João Pereira (Nota: 6.8, Cursos: História)
 
-**Outras Ações:**
-
-| Ação                     | Detalhes                                                 |
-|--------------------------|----------------------------------------------------------|
-| Adicionar aluno          | Aluna Ana Silva foi adicionada                           |
-| Adicionar aluno          | Aluno Carlos Santos foi adicionada                       |
-| Adicionar aluno          | Aluna Maria Oliveira foi adicionada                      |
-| Adicionar aluno          | Aluno João Pereira foi adicionada                        |
-| Atribuir Curso           | Ana Silva matriculada em "Matemática" e "Programação"    |
-| Atribuir Curso           | Carlos Santos matriculado em "Física" e "Banco de Dados" |
-| Atribuir Curso           | Maria Oliveira matriculada em "Química"                  |
-| Atribuir Curso           | João Pereira matriculado em "História"                   |
-| 3. Atribuir nota a aluno | Aluna Ana Silva foi adicionada                           |
-| Listar Alunos por Curso  | Exibidos os alunos do curso "Programação": Ana Silva     |
+## Imagens das execuções
+![Inputs - JalaUniversityStudentManagement - IntelliJ.png](Inputs%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
+![Inputs 2 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%202%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
+![Inputs 3 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%203%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
+![Inputs 4 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%204%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
+![Inputs 5 - JalaUniversityStudentManagement - IntelliJ.png](Inputs%205%20-%20JalaUniversityStudentManagement%20-%20IntelliJ.png)
